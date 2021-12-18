@@ -6,221 +6,381 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
-  <body>
-    <header class="flex h-24 w-screen border-b-2 justify-around items-center">
-      <h3 class='font-bold'> NFTOP</h3>
-      <div class='flex justify-between items-center '>
-        <p class='ml-4 text-gray-600'>Advertise</p>
-        <button class='ml-4 text-gray-600  border-2 border-gray-500 rounded-l-full rounded-r-full px-4'>List NFT</button>
-        <span class='ml-4'><img src="img/segment_black_18dp.svg" /></span>
-        <div type='button' class="w-14 h-7 flex items-center bg-gray-300 rounded-full mx-3 px-1 ml-2" ><div class="bg-white w-5 h-5 rounded-full shadow-md transform"  :class="{ 'translate-x-7': toggleActive}" ></div>
+  <body class="flex flex-col items-center">
+    <!-- Header -->
+    <div
+      class="flex w-10/12 h-20 flex-row justify-between items-center lg:w-7/12"
+    >
+      <div class=""><p class="text-3xl text-gray-600">NFTOP</p></div>
+      <div class="visible gap-6 lg:invisible">
+        <button class="bg-blue-500 w-8 h-8"><i class="fas fa-bars"></i></button>
       </div>
-    </header>
-    <main class=" w-screen h-auto mb-12">
-      <div class='flex justify-center items-center'>
-
-        <div class="flex h-24 w-7/12  justify-between items-center">
-          <p class='font-bold text-2xl'>Featured NFTS</p>
-          <p class='text-gray-600 underline'>Advertise with us</p>
+      <div class="flex invisible lg:visible hidden lg:block">
+        <div class="flex gap-6">
+          <span>Advertise</span>
+          <span
+            ><button class="border-2 rounded-full px-3">List NFT</button></span
+          >
+          <span><img src="/img/segment_black_18dp.svg" /></span>
+     
+          <div class='flex w-16 bg-gray-300 rounded-full'><div class="w-8 h-8 rounded-full bg-blue-300"></div></div>
+          <!-- <span><input type="checkbox" class="w-12 bg-gray-300" /></span> -->
         </div>
       </div>
-      <div class="flex w-screen flex-wrap justify-center items-center my-20">
-        <div class='flex flex-col w-40 h-60 bg-gray-300 p-2 mx-10 my-4 rounded-lg items-center'><div class='flex justify-around items-center w-36 bg-gray-100 h-48 rounded-lg'><img class='h-28 w-36' src='img/2561450_image_icon.svg' /></div><h3 class='text-gray-600 my-2'>Slimy Skater</h3></div>
-        <div class='flex flex-col w-40 h-60 bg-gray-300 p-2 mx-10 my-4 rounded-lg items-center'><div class='flex justify-around items-center w-36 bg-gray-100 h-48 rounded-lg'><img class='h-28 w-36' src='img/2561450_image_icon.svg' /></div><h3 class='text-gray-600 my-2'>Sota</h3></div>
-        <div class='flex flex-col w-40 h-60 bg-gray-300 p-2 mx-10 my-4 rounded-lg items-center'><div class='flex justify-around items-center w-36 bg-gray-100 h-48 rounded-lg'><img class='h-28 w-36' src='img/2561450_image_icon.svg' /></div><h3 class='text-gray-600 my-2'>Creemo</h3></div>
-        <div class='flex flex-col w-40 h-60 bg-gray-300 p-2 mx-10 my-4 rounded-lg items-center'><div class='flex justify-around items-center w-36 bg-gray-100 h-48 rounded-lg'><img class='h-28 w-36' src='img/2561450_image_icon.svg' /></div><h3 class='text-gray-600 my-2'>Yua Mikami</h3></div>
-        <div class='flex flex-col w-40 h-60 bg-gray-300 p-2 mx-10 my-4 rounded-lg items-center'><div class='flex justify-around items-center w-36 bg-gray-100 h-48 rounded-lg'><img class='h-28 w-36' src='img/2561450_image_icon.svg' /></div><h3 class='text-gray-600 my-2'>ethereBB's</h3></div>
-      </div>
-      
-      <div class='flex flex-wrap justify-around items-center py-4'>
-          <div>  <p class='text-2xl font-bold ml-2'> Best NFTS</p><div class='flex flex-wrap justify-between items-center'><p class='my-2 mx-4 border-b-2 border-black'>Today</p><p class='my-2 mx-4'>All time</p></div></div>
-          <div class='flex justify-center items-center mx-4'><button  class='w-8 h-8 border border-solid border-gray-300 border-t-1 border-r-0 border-b-1 border-l-1 rounded-l-3xl pl-2 '><img src="https://img.icons8.com/small/16/000000/search.png"/></button><input placeholder="Search" class='w-48 h-8  border border-solid border-gray-300 border-t-1 border-r-1 border-b-1 border-l-0 mr-2 rounded-r-3xl outline-none px-2'/></div>
+    </div>
+
+    <!-- HR -->
+    <div class="w-screen h-0 border-b-2"></div>
+    <!-- Main -->
+    <div class="w-10/12 lg:w-7/12">
+      <div class="flex flex-col">
+        <!-- 1 -->
+        <div class="flex flex-col justify-between md:flex-row gap-8 my-8">
+          <div>
+            <p class="text-2xl font-bold text-gray-800">Featured NFT</p>
+          </div>
+          <div><p class="text-gray-600 underline">Advertise with us</p></div>
         </div>
-      
-  <!-- <div class='flex  justify-center items-center '> -->
-<div class="flex justify-center items-center">
-  <table class=" flex w-7/12 justify-center items-center flex-row flex-no-wrap sm:bg-white overflow-hidden sm:shadow-lg my-5 ">
-    <thead class="text-gray-600">
-      <tr class="bg-gray-200 flex flex-col flex-no wrap sm:table-row sm:rounded-none ">
-        
+        <!-- 2 -->
+        <div class="flex flex-wrap justify-between gap-2 my-10">
+          <div
+            class="
+              flex flex-col
+              w-40
+              h-60
+              bg-gray-300
+              p-2
+              my-4
+              rounded-lg
+              items-center
+            "
+          >
+            <div
+              class="
+                flex
+                justify-around
+                items-center
+                w-36
+                bg-gray-100
+                h-48
+                rounded-lg
+              "
+            >
+              <img class="h-28 w-36" src="img/2561450_image_icon.svg" />
+            </div>
+            <h3 class="text-gray-600 my-2">Slimy Skater</h3>
+          </div>
+          <div
+            class="
+              flex flex-col
+              w-40
+              h-60
+              bg-gray-300
+              p-2
+              my-4
+              rounded-lg
+              items-center
+            "
+          >
+            <div
+              class="
+                flex
+                justify-around
+                items-center
+                w-36
+                bg-gray-100
+                h-48
+                rounded-lg
+              "
+            >
+              <img class="h-28 w-36" src="img/2561450_image_icon.svg" />
+            </div>
+            <h3 class="text-gray-600 my-2">Sota</h3>
+          </div>
+          <div
+            class="
+              flex flex-col
+              w-40
+              h-60
+              bg-gray-300
+              p-2
+              my-4
+              rounded-lg
+              items-center
+            "
+          >
+            <div
+              class="
+                flex
+                justify-around
+                items-center
+                w-36
+                bg-gray-100
+                h-48
+                rounded-lg
+              "
+            >
+              <img class="h-28 w-36" src="img/2561450_image_icon.svg" />
+            </div>
+            <h3 class="text-gray-600 my-2">Creemo</h3>
+          </div>
+          <div
+            class="
+              flex flex-col
+              w-40
+              h-60
+              bg-gray-300
+              p-2
+              my-4
+              rounded-lg
+              items-center
+            "
+          >
+            <div
+              class="
+                flex
+                justify-around
+                items-center
+                w-36
+                bg-gray-100
+                h-48
+                rounded-lg
+              "
+            >
+              <img class="h-28 w-36" src="img/2561450_image_icon.svg" />
+            </div>
+            <h3 class="text-gray-600 my-2">Yua Mikami</h3>
+          </div>
+          <div
+            class="
+              flex flex-col
+              w-40
+              h-60
+              bg-gray-300
+              p-2
+              my-4
+              rounded-lg
+              items-center
+            "
+          >
+            <div
+              class="
+                flex
+                justify-around
+                items-center
+                w-36
+                bg-gray-100
+                h-48
+                rounded-lg
+              "
+            >
+              <img class="h-28 w-36" src="img/2561450_image_icon.svg" />
+            </div>
+            <h3 class="text-gray-600 my-2">ethereBB's</h3>
+          </div>
+        </div>
+        <!-- 3 -->
+        <div class="flex flex-wrap justify-between gap-x-20">
+          <div class="">
+            <div class="">
+              <p class="text-2xl font-bold text-gray-800">Best NFTS</p>
+            </div>
+            <div class="flex gap-8">
+              <div class="border-b-2 border-gray-700">
+                <p class="text-gray-700">Today</p>
+              </div>
+              <p class="text-gray-600">All time</p>
+            </div>
+          </div>
+          <div class="my-8">
+            <div class="flex justify-center items-center">
+              <button
+                class="
+                  w-8
+                  h-8
+                  border
+                  border-solid
+                  border-gray-300
+                  border-t-1
+                  border-r-0
+                  border-b-1
+                  border-l-1
+                  rounded-l-3xl
+                  pl-2
+                "
+              >
+                <img
+                  src="https://img.icons8.com/small/16/000000/search.png"
+                /></button
+              ><input
+                placeholder="Search"
+                class="
+                  w-48
+                  h-8
+                  border
+                  border-solid
+                  border-gray-300
+                  border-t-1
+                  border-r-1
+                  border-b-1
+                  border-l-0
+                  mr-2
+                  rounded-r-3xl
+                  outline-none
+                  px-2
+                "
+              />
+            </div>
+          </div>
+        </div>
 
-        <th class=" p-3 text-left mt-1">#</th>
-        <th class=" p-3 text-left mt-1">NFT</th>
-        <th class=" p-3 text-left mt-1">Chain</th>
-        <th class=" p-3 text-left mt-1">Price</th>
-        <th class=" p-3 text-left mt-1">Buyers</th>
-        <th class=" p-3 text-left mt-1">Launch Date</th>
-        <th class=" p-3 text-left mt-1">Age</th>
-        <th class=" p-3 text-left mt-1">Type</th>
-        <th class=" p-3 text-left mt-1">Vote</th>
-        
-      </tr>
-      <tr class="bg-gray-200 flex flex-col flex-no wrap sm:table-row sm:rounded-none ">
-        
+        <!-- 4 Tabel -->
+        <!-- 4 -->
 
-        <th class=" p-3 text-left mt-1">#</th>
-        <th class=" p-3 text-left mt-1">NFT</th>
-        <th class=" p-3 text-left mt-1">Chain</th>
-        <th class=" p-3 text-left mt-1">Price</th>
-        <th class=" p-3 text-left mt-1">Buyers</th>
-        <th class=" p-3 text-left mt-1">Launch Date</th>
-        <th class=" p-3 text-left mt-1">Age</th>
-        <th class=" p-3 text-left mt-1">Type</th>
-        <th class=" p-3 text-left mt-1">Vote</th>
-      </tr>
-      <tr class="bg-gray-200 flex flex-col flex-no wrap sm:table-row sm:rounded-none ">
-        
-        <th class=" p-3 text-left mt-1">#</th>
-        <th class=" p-3 text-left mt-1">NFT</th>
-        <th class=" p-3 text-left mt-1">Chain</th>
-        <th class=" p-3 text-left mt-1">Price</th>
-        <th class=" p-3 text-left mt-1">Buyers</th>
-        <th class=" p-3 text-left mt-1">Launch Date</th>
-        <th class=" p-3 text-left mt-1">Age</th>
-        <th class=" p-3 text-left mt-1">Type</th>
-        <th class=" p-3 text-left mt-1">Vote</th>
-      </tr>
-      <tr class="bg-gray-200 flex flex-col flex-no wrap sm:table-row sm:rounded-none ">
-        
-        <th class=" p-3 text-left mt-1">#</th>
-        <th class=" p-3 text-left mt-1">NFT</th>
-        <th class=" p-3 text-left mt-1">Chain</th>
-        <th class=" p-3 text-left mt-1">Price</th>
-        <th class=" p-3 text-left mt-1">Buyers</th>
-        <th class=" p-3 text-left mt-1">Launch Date</th>
-        <th class=" p-3 text-left mt-1">Age</th>
-        <th class=" p-3 text-left mt-1">Type</th>
-        <th class=" p-3 text-left mt-1">Vote</th>
-      </tr>
-    </thead>
-    <tbody class="flex-1 sm:flex-none">
-      <tr class="flex flex-col flex-no wrap sm:table-row sm:mb-0">
-        
-
-        <td class="border-grey-light border hover:bg-gray-100 p-3">1</td>
-        <td class="border-grey-light border hover:bg-gray-100 p-3">
-          <div class='flex'>
-            <img src="img/2561450_image_icon.svg" />
-            <p>Mutant cats</p>
-            
-          </div> 
-        </td>
-        <td class="border-grey-light border hover:bg-gray-100 p-3"> <i class="fab fa-ethereum"> ETH</i></td>
-        <td class="border-grey-light border hover:bg-gray-100 p-3">0.000000333052</td>
-        <td class="border-grey-light border hover:bg-gray-100 p-3">5,42</td>
-        <td class="border-grey-light border hover:bg-gray-100 p-3">02/04/21</td>
-        <td class="border-grey-light border hover:bg-gray-100 p-3">5 days</td>
-        <td class="border-grey-light border hover:bg-gray-100 p-3">Single</td>
-        <td class="border-grey-light border hover:bg-gray-100 p-3"><button class='bg-gray-700 text-white p-2 rounded-l-3xl rounded-r-3xl'>Vote Button</button></td>
-        
-      </tr>
-      <tr class="flex flex-col flex-no wrap sm:table-row sm:mb-0">
-        
-        <td class="border-grey-light border hover:bg-gray-100 p-3">2</td>
-        <td class="border-grey-light border hover:bg-gray-100 p-3">
-          <div class='flex'>
-            <img src="img/2561450_image_icon.svg" />
-            <p>Mutant cats</p>
-            
-          </div> 
-        </td>
-        <td class="border-grey-light border hover:bg-gray-100 p-3"> <i class="fab fa-ethereum"> ETH</i></td>
-        <td class="border-grey-light border hover:bg-gray-100 p-3">0.000000333052</td>
-        <td class="border-grey-light border hover:bg-gray-100 p-3">5,42</td>
-        <td class="border-grey-light border hover:bg-gray-100 p-3">02/04/21</td>
-        <td class="border-grey-light border hover:bg-gray-100 p-3">5 days</td>
-        <td class="border-grey-light border hover:bg-gray-100 p-3">Multiple</td>
-        <td class="border-grey-light border hover:bg-gray-100 p-3"><button class='bg-gray-700 text-white p-2 rounded-l-3xl rounded-r-3xl'>Vote Button</button></td>
-        
-      </tr>
-      <tr class="flex flex-col flex-no wrap sm:table-row sm:mb-0">
-    
-        <td class="border-grey-light border hover:bg-gray-100 p-3">3</td>
-        <td class="border-grey-light border hover:bg-gray-100 p-3">
-          <div class='flex'>
-            <img src="img/2561450_image_icon.svg" />
-            <p>Mutant cats</p>
-            
-          </div> 
-        </td>
-        <td class="border-grey-light border hover:bg-gray-100 p-3"> <i class="fab fa-ethereum"> ETH</i></td>
-        <td class="border-grey-light border hover:bg-gray-100 p-3">0.000000333052</td>
-        <td class="border-grey-light border hover:bg-gray-100 p-3">5,42</td>
-        <td class="border-grey-light border hover:bg-gray-100 p-3">02/04/21</td>
-        <td class="border-grey-light border hover:bg-gray-100 p-3">5 days</td>
-        <td class="border-grey-light border hover:bg-gray-100 p-3">Multiple</td>
-        <td class="border-grey-light border hover:bg-gray-100 p-3"><button class='bg-gray-700 text-white p-2 rounded-l-3xl rounded-r-3xl'>Vote Button</button></td>
-      </tr>
-      <tr class="flex flex-col flex-no wrap sm:table-row sm:mb-0">
-        
-        <td class="border-grey-light border hover:bg-gray-100 p-3">4</td>
-        <td class="border-grey-light border hover:bg-gray-100 p-3">
-          <div class='flex'>
-            <img src="img/2561450_image_icon.svg" />
-            <p>Mutant cats</p>
-            
-          </div> 
-        </td>
-        <td class="border-grey-light border hover:bg-gray-100 p-3"> <i class="fab fa-ethereum"> ETH</i></td>
-        <td class="border-grey-light border hover:bg-gray-100 p-3">0.000000333052</td>
-        <td class="border-grey-light border hover:bg-gray-100 p-3">5,42</td>
-        <td class="border-grey-light border hover:bg-gray-100 p-3">02/04/21</td>
-        <td class="border-grey-light border hover:bg-gray-100 p-3">5 days</td>
-        <td class="border-grey-light border hover:bg-gray-100 p-3">Single</td>
-        <td class="border-grey-light border hover:bg-gray-100 p-3"><button class='bg-gray-700 text-white p-2 rounded-l-3xl rounded-r-3xl'>Vote Button</button></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-</main>
-<footer class='w-screen h-auto bg-gray-800 '>
-<div class='flex flex-col justify-around items-center flex-wrap sm:flex-row'>
-  <div class='flex flex-col '>
-    <p class='text-white mx-2 my-6 text-xl border-xl'>NOFTP</p>
-    <div class='flex mb-4'>
-      <p class='text-white mx-2'>Terms</p>
-      <p class='text-white mx-2'>Privacy policy</p>
+        <div class="flex flex-col w-12/12 sm:w-full">
+          <table class="flex flex-col">
+            <thead class="flex flex-col w-full">
+              <tr class="flex justify-around  bg-gray-300 gap-2 sm:gap-0 items-center  ">
+                <th class='hidden lg:inline'>#</th>
+                <th class='pr-2 lg:pr-14 sm:pr-6'>NFT</th>
+                <th class='pr-6'>Chain</th>
+                <th >Price</th>
+                <th class=' hidden lg:inline'>Buyers</th>
+                <th class='hidden lg:inline '>Launch Date</th>
+                <th class='hidden xl:inline pr-14'>Age</th>
+                <th class='hidden xl:inline pr-14'>Type</th>
+                <th class='pl-6 sm:pl-0'>Vote</th>
+              </tr>
+            </thead>
+            <tbody class="flex flex-col w-full"></tbody>
+              <tr class="flex  bg-white items-center justify-around  ">
+                <td class='pl-4 hidden lg:inline'>1</td>
+                <td class='pl-2'>
+                  <div class="flex gap-2">
+                    <img src="/img/2561450_image_icon.svg" />
+                    <p class="hidden sm:inline">Mutant cats</p>
+                  </div>
+                </td>
+                <td><i class="fab fa-ethereum">ETH</i></td>
+                <td class='py-4'>0.333052</td>
+                <td class='hidden lg:inline'>5,42</td>
+                <td class='pl-6 hidden lg:inline '> 02/04/21</td>
+                <td class='pl-6 hidden xl:inline'>5 days</td>
+                <td class='pl-14 hidden xl:inline'>Single</td>
+                <td class='pl-6 '>
+                  <button class="rounded-full text-white px-2 bg-gray-800">Vote </button>
+                </td>
+              </tr>
+              <tr class="flex justify-around bg-gray-300 items-center">
+                <td class='pl-4 hidden lg:inline'>1</td>
+                <td class='pl-2'>
+                  <div class="flex gap-2">
+                    <img src="/img/2561450_image_icon.svg" />
+                    <p class="hidden sm:inline">Mutant cats</p>
+                  </div>
+                </td>
+                <td><i class="fab fa-ethereum">ETH</i></td>
+                <td class='py-4'>0.333052</td>
+                <td class='hidden lg:inline'>5,42</td>
+                <td class='pl-6 hidden lg:inline '> 02/04/21</td>
+                <td class='pl-6 hidden xl:inline'>5 days</td>
+                <td class='pl-14 hidden xl:inline'>Single</td>
+                <td class='pl-6 '>
+                  <button class="rounded-full text-white px-2 bg-gray-800">Vote </button>
+                </td>
+              <tr class="flex justify-around  bg-white items-center">
+                <td class='pl-4 hidden lg:inline'>1</td>
+                <td class='pl-2'>
+                  <div class="flex gap-2">
+                    <img src="/img/2561450_image_icon.svg" />
+                    <p class="hidden sm:inline">Mutant cats</p>
+                  </div>
+                </td>
+                <td><i class="fab fa-ethereum">ETH</i></td>
+                <td class='py-4'>0.333052</td>
+                <td class='hidden lg:inline'>5,42</td>
+                <td class='pl-6 hidden lg:inline '> 02/04/21</td>
+                <td class='pl-6 hidden xl:inline'>5 days</td>
+                <td class='pl-14 hidden xl:inline'>Single</td>
+                <td class='pl-6 '>
+                  <button class="rounded-full text-white px-2 bg-gray-800">Vote </button>
+                </td>
+              </tr>
+              <tr class="flex justify-around  bg-gray-300 items-center" >
+                <td class='pl-4 hidden lg:inline'>1</td>
+                <td class='pl-2'>
+                  <div class="flex gap-2">
+                    <img src="/img/2561450_image_icon.svg" />
+                    <p class="hidden sm:inline">Mutant cats</p>
+                  </div>
+                </td>
+                <td><i class="fab fa-ethereum">ETH</i></td>
+                <td class='py-4'>0.333052</td>
+                <td class='hidden lg:inline'>5,42</td>
+                <td class='pl-6 hidden lg:inline '> 02/04/21</td>
+                <td class='pl-6 hidden xl:inline'>5 days</td>
+                <td class='pl-14 hidden xl:inline'>Single</td>
+                <td class='pl-6 '>
+                  <button class="rounded-full text-white px-2 bg-gray-800">Vote </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class='flex flex-col mt-20 my-20'>
-    <p class="text-white">©NOTOP,Inc.All rights reserved.</p>
-  </div>
-  <div class='flex flex-col mt-10 ''>
-   <div class='flex gap-10'>
-     <p class='text-white'>Advertise</p>
-     <p class='text-white'>List NFT</p>
-     <p class='text-white'>Contacts</p>
-   </div>
-   <div class="flex justify-end my-6 ">
-     <span class='text-white ml-4'><i class="fab fa-twitter"></i></span>
-     <span class='text-white ml-4'><i class="fab fa-facebook-f"></i></span>
-     <span class='text-white ml-4'><i class="fab fa-telegram"></i></span>
-     <span class='text-white ml-4'><i class="fab fa-instagram"></i></span>
-     <span class='text-white ml-4'><i class="fab fa-youtube"></i></span>
-
+    <!-- Footer-->
+    <div class="flex flex-col items-center w-full text-white mt-16 bg-gray-800">
+    <div class="flex w-10/12 lg:w-7/12 flex-col items-center gap-2 justify-between lg:flex-row">
+        <div class="flex flex-col gap-8 py-4">
+          <div>
+            <p class="font-bold text-xl">NOFTOP</p>
+          </div>
+          <div class="flex gap-4">
+            <p>Terms</p>
+            <p>Privacy Policy</p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-8 py-4">
+          <div class="hidden lg:block"></div>
+          <div>
+            <p class="footer-text pt-0 lg:pt-8">© NFTOP.inc.ALl Rights reserved.</p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-8 py-4">
+          <div class="flex flex-row gap-8">
+            <p class="footer-text">Advertise</p>
+            <p class="footer-text">List NFT</p>
+            <p class="footer-text">Contacts</p>
+          </div>
+          <div class="flex justify-end flex-row gap-6">
+            <span
+              ><a><i class="fab fa-twitter"></i></a
+            ></span>
+            <span
+              ><a><i class="fab fa-facebook-f"></i></a
+            ></span>
+            <span
+              ><a><i class="fab fa-telegram"></i></a
+            ></span>
+            <span
+              ><a><i class="fab fa-instagram"></i></a
+            ></span>
+            <span
+              ><a><i class="fab fa-youtube"></i></a
+            ></span>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-</footer>
-</body>
-<style>
-  html,
-    body {
-      height: 100%;
-    }
-    tbody tr:nth-child(even) {
-      background-color: #dfdbdb;
-    }
-    @media (min-width: 640px) {
-      table {
-        display: inline-table !important;
-      }
+  </body>
   
-      thead tr:not(:first-child) {
-        display: none;
-      }
-    }  
-  </style>
 </html>
